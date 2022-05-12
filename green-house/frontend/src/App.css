@@ -1,38 +1,60 @@
+/* ALL */ 
+
+:root {
+  --primary-color: #289F5F;
+  --secondary-color: #58D592;
+  --tertiary-color: #F4FBF5;
+  --tertiary-color-2: #5A5A5A;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing:border-box;
+  margin: 0;
+  font-family: "PT Root UI";
+  scroll-behavior: smooth;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content {
+  padding-bottom: 50px;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  appearance: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: var(--primary-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media only screen and (min-width: 1024px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

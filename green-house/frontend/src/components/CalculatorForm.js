@@ -1,6 +1,5 @@
 import React, { useContext} from 'react'
 import CurrentUserContext from '../Contexts/contexts';
-import Calculator from './Calculator';
 
 
 function CalculatorForm() {
@@ -37,24 +36,10 @@ function CalculatorForm() {
             <label htmlFor="Car">Car</label><br/>
             <input type="radio" id="Bicycle/Walking" name="transportation_type" value="Bicycle/Walking" onClick={handleTranportationType}/>
             <label htmlFor="Bicycle/Walking">Bicycle/Walking</label><br/>
-            <input type="radio" id="Bus" name="transportation_type" value="Bus" onClick={handleTranportationType}/>
-            <label htmlFor="Bus">Bus</label>
+  {/*           <input type="radio" id="Bus" name="transportation_type" value="Bus" onClick={handleTranportationType}/>
+            <label htmlFor="Bus">Bus</label> */}
           </div>
         </div>
-
-        <div>
-          <h2>Enter your route</h2>
-          <div>
-            <div>
-              {/* icons */}
-            </div>
-            <input type="radio" id="Car" name="transportation_type" value="Car"/>
-            <label htmlFor="Car">Car</label><br/>
-            <input type="radio" id="Bicycle/Walking" name="transportation_type" value="Bicycle/Walking"/>
-            <label htmlFor="Bicycle/Walking">Bicycle/Walking</label><br/>
-          </div>
-        </div>
-
         <div>
           <h2>Trip/Frequency</h2>
           <div>

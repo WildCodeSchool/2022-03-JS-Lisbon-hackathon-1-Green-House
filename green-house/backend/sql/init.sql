@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users
+(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR
+(90) UNIQUE,
+    password VARCHAR NOT NULL
+(90),
+    userName VARCHAR NOT NULL
+(90),
+    score INT
+);
+
+

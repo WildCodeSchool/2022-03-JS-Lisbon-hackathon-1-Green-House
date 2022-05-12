@@ -1,18 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import { CurrentUserContextProvider } from './Contexts/contexts';
 import CalculatorForm from './components/CalculatorForm';
 import Calculator from './components/Calculator';
+import Navbar from './components/navigation/Navbar/Navbar';
+import Footer from './components/navigation/Footer/Footer';
+import Main from './components/main/Main';
 
 function App() {
   return (
     <CurrentUserContextProvider>
-      <CalculatorForm/>
-      {/* <div>calculate the amount of  co2 emitted and change your life</div> */}
-      <Calculator/>
+      <Navbar/>
+        <Main/>
+      <Footer />
     </CurrentUserContextProvider>
-
-  );
+  )
 }
 
 export default App;
