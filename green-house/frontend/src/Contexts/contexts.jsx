@@ -13,7 +13,7 @@ export const CurrentUserContextProvider = ({ children }) => {
     const [km, setKm] = useState();
     const [displayCard, setDisplayCard] = useState(false);
     const [resultsCO2, setResultsCO2] = useState(0);
-
+    const [lengthInMeters, setLengthInMeters] = useState('')
 
     return (
         <CurrentUserContext.Provider
@@ -27,7 +27,10 @@ export const CurrentUserContextProvider = ({ children }) => {
                 km, 
                 setKm,
                 resultsCO2, 
-                setResultsCO2}}
+                setResultsCO2,
+                lengthInMeters, 
+                setLengthInMeters
+            }}
         >
             {children}
         </CurrentUserContext.Provider>
