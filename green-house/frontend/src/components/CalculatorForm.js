@@ -6,11 +6,6 @@ import Calculator from './Calculator';
 function CalculatorForm() {
     const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard, km, setKm, resultsCO2, setResultsCO2} = useContext(CurrentUserContext)
   
-  
-
-
-
-
 
     function handleTranportationType(event) {
         setUserTransportation(event.target.value);
@@ -21,13 +16,11 @@ function CalculatorForm() {
     }
 
     function handleDisplayCard(){
-        console.log("Aqui")
         setDisplayCard(true);
     }
 
     function handleKm(event){
         setKm(event.target.value);
-        console.log(km)
     }
 
 
