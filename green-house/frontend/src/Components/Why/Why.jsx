@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Why() {
     return (
-        <div>
+        <div className="whyContainer">
             <h1>Why ?</h1>
                 <div className="why-text">
                     <p>

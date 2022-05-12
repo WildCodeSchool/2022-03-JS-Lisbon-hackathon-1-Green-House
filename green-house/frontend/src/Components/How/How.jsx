@@ -5,7 +5,7 @@ export default function How() {
     return (
         <div>
             <h1>How ?</h1>
-            <div className="stepContainer">
+            <div className="howContainer">
                 
                     <div className="stepOne">
                         <p>

@@ -1,24 +1,27 @@
-.stepContainer{
+.howContainer{
     background-color: #58D592;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
+    height: 10cm;
 }
 
 .stepOne{
     display: flex;
     background-color: gray;
-    height: 180px;
-    width: 120px;
+    height: 160px;
+    width: 130px;
     border-radius: 10%;
     margin: 5px;
+    
 }
 
 .stepTwo{
     display: flex;
     background-color: gray;
-    height: 180px;
-    width: 120px;
+    height: 160px;
+    width: 130px;
     border-radius: 10%;
     margin: 5px;
 }
@@ -26,13 +29,13 @@
 .stepThree{
     display: flex;
     background-color: gray;
-    height: 180px;
-    width: 120px;
+    height: 160px;
+    width: 130px;
     border-radius: 10%;
     margin: 5px;
 }
 
 p {
     text-align: left;
-    
+
 }
