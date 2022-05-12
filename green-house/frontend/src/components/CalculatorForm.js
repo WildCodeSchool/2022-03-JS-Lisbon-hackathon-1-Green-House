@@ -1,11 +1,17 @@
 import React, { useContext} from 'react'
 import CurrentUserContext from '../Contexts/contexts';
+import Calculator from './Calculator';
 
 
 function CalculatorForm() {
-    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard, km, setKm} = useContext(CurrentUserContext)
+    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard, km, setKm, resultsCO2, setResultsCO2} = useContext(CurrentUserContext)
   
   
+
+
+
+
+
     function handleTranportationType(event) {
         setUserTransportation(event.target.value);
     }
@@ -15,14 +21,17 @@ function CalculatorForm() {
     }
 
     function handleDisplayCard(){
+        console.log("Aqui")
         setDisplayCard(true);
-        console.log(displayCard)
     }
 
     function handleKm(event){
         setKm(event.target.value);
         console.log(km)
     }
+
+
+    
 
     return (
     <div>
@@ -71,6 +80,7 @@ function CalculatorForm() {
           <div>
             <label htmlFor="fuelType">Choose your fuel type:</label>
                 <select id="fuelType" name="fuelType" onChange={handleFuelType}>
+                    <option value="">---</option>
                     <option value="Diesel">Diesel</option>
                     <option value="Petrol">Petrol</option>
                     <option value="LPG">LPG</option>
