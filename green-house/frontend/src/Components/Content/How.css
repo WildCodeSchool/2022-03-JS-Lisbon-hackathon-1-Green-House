@@ -1,14 +1,23 @@
-h1{
+
+.how-container{
     background-color: #58D592;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    min-height: 300px;
 }
 
-.howContainer{
-    background-color: #58D592;
+.how-container h1{
+    text-align: center;
+}
+
+.steps-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 10cm;
+    
 }
 
 .stepOne, .stepTwo, .stepThree{

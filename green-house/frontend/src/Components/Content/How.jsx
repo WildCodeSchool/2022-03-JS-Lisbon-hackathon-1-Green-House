@@ -3,11 +3,11 @@ import './How.css';
 
 export default function How() {
     return (
-        <div>
-            <div className="howTitle">
+        <div className="how-container">
+            <div className="how-title">
             <h1>How ?</h1>
             </div>
-            <div className="howContainer">
+            <div className="steps-container">
                 
                     <div className="stepOne">
                         <p>

@@ -1,13 +1,15 @@
 import './App.css';
-import How from './Components/Content/How';
-import Why from './Components/Content/Why';
+import './components/fonts/fonts.css'
+import Navbar from './components/navigation/Navbar/Navbar';
+import Footer from './components/navigation/Footer/Footer';
+import Main from './components/main/Main';
 
 function App() {
   return (
     <div className="App">
-      <How />
-      <Why />
-
+        <Navbar/>
+          <Main/>
+        <Footer />
     </div>
   );
 }
