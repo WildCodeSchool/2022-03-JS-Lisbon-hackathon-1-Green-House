@@ -6,6 +6,8 @@ import Why from './Info/Why/Why';
 function App() {
   return (
     <div className="App">
+      <How />
+      <Why />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,8 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <How />
-      <Why />
+
     </div>
   );
 }
