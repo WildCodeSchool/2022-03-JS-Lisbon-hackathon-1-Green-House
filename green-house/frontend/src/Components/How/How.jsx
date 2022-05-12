@@ -6,7 +6,7 @@ export default function How() {
         <div>
             <h1>How ?</h1>
             <div className="howContainer">
-                
+            
                     <div className="stepOne">
                         <p>
                         Insert your trip Begin-Point and End-Point
@@ -18,7 +18,7 @@ export default function How() {
                         </p>
                     </div>
                     <div className="stepThree">
-                        <p>
+                        <p >
                         You earn Points based on the amount of CO2 you dont pollute 
                         </p>
                     </div>

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import How from './Components/How/How';
 import Why from './Components/Why/Why';
@@ -8,6 +7,7 @@ function App() {
     <div className="App">
       <How />
       <Why />
+
     </div>
   );
 }

@@ -1,3 +1,7 @@
+h1{
+    background-color: #58D592;
+}
+
 .howContainer{
     background-color: #58D592;
     display: flex;
@@ -9,33 +13,35 @@
 
 .stepOne{
     display: flex;
-    background-color: gray;
-    height: 160px;
+    background-color: var(--tertiary-color);
+    height: 200px;
     width: 130px;
     border-radius: 10%;
     margin: 5px;
-    
+    padding: 30px;
 }
 
 .stepTwo{
     display: flex;
-    background-color: gray;
-    height: 160px;
+    background-color: var(--tertiary-color);
+    height: 200px;
     width: 130px;
     border-radius: 10%;
     margin: 5px;
+    padding: 30px;
 }
 
 .stepThree{
     display: flex;
-    background-color: gray;
-    height: 160px;
+    background-color: var(--tertiary-color);
+    height: 200px;
     width: 130px;
     border-radius: 10%;
     margin: 5px;
+    padding: 30px;
 }
 
-p {
+.howContainer p {
     text-align: left;
 
 }

@@ -1,17 +1,18 @@
+h1{
+    background-color: white;
+}
 .whyContainer{
-    background-color: #58D592;
-    display: flex;
-    flex-direction: row;
+    
     align-items: center;
-    justify-content: space-evenly;
     height: 10cm;
 }
 
-.why-text{
 
-}
 
-p {
-    text-align: left;
+.whyContainer p {
+    
+    width: auto;
+    padding-left: 40px;
+    padding-top: 40px;
 
 }
