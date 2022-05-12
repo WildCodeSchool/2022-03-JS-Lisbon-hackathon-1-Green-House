@@ -6,7 +6,7 @@ import { Logo } from '../../../media/exportMedia'
 function Footer(props) {
   return (
     <footer className="footer-container">
-      <div className="footer-flex">
+      <div className="footer-flex container">
         <div className="footer-1-flex">
           <Link to="/">
             <Logo/>

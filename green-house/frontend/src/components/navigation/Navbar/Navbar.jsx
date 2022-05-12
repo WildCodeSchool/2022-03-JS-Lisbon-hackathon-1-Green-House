@@ -18,7 +18,7 @@ function Navbar() {
 
     return (
 
-        <div className="navbar-container">
+        <div className="navbar-container container">
             <Link to="/"><Logo/></Link>
             <nav className="navbar-desktop">
  

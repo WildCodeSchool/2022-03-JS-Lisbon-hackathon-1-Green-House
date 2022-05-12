@@ -1,0 +1,17 @@
+
+.leaderboard-container {
+    display: grid;
+    gap: 60px;
+}
+
+
+.leaderboard-table-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+.leaderboard-table > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

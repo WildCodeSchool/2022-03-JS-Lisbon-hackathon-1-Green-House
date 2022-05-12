@@ -9,7 +9,7 @@
 }
 
 .whyContainer p {
-    
+
     width: auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -61,7 +61,7 @@
     .why-content {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        max-width: 80vw;
+        max-width: 1140px;
         gap: 40px;
         align-items: center;
         margin: 0 auto;

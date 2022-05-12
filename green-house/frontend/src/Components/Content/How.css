@@ -17,8 +17,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    
+    margin: 0 auto;
+    gap: 30px;
+    max-width: 60vw;
 }
 
 .stepOne, .stepTwo, .stepThree{
@@ -45,6 +46,7 @@
 
     .steps-container {
         flex-direction: row;
+        max-width: 1140px;
     }
     .Location{
         
