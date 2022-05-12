@@ -4,7 +4,9 @@ import './Why.css';
 export default function Why() {
     return (
         <div className="whyContainer">
+            <div className="why-title">
             <h1>Why ?</h1>
+            </div>
                 <div className="whyText">
                     <p>
                     To reduce the amount of CO2 produced by transportation on a day-to-day basis for greener cities
