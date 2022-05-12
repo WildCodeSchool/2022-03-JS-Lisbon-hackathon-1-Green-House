@@ -1,6 +1,6 @@
 import './App.css';
-import How from './Components/How/How';
-import Why from './Components/Why/Why';
+import How from './Components/Content/How';
+import Why from './Components/Content/Why';
 
 function App() {
   return (
