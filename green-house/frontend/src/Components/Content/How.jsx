@@ -4,9 +4,11 @@ import './How.css';
 export default function How() {
     return (
         <div>
+            <div className="howTitle">
             <h1>How ?</h1>
+            </div>
             <div className="howContainer">
-            
+                
                     <div className="stepOne">
                         <p>
                         Insert your trip Begin-Point and End-Point
