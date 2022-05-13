@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 // import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../Contexts/AuthContext";
+
 
 function Login() {
   const [state, setState] = useState({});

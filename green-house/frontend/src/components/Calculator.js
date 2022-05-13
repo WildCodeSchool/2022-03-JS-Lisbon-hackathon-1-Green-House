@@ -5,9 +5,9 @@ function Calculator() {
    
   const { userTransportation, setUserTransportation, fuelType, setFuelType, displayCard, setDisplayCard, lengthInMeters, setLengthInMeters, tripType, setTripType, setFrequencyType, frequencyType, travelTimeInSeconds} = useContext(CurrentUserContext);
 
- const [result, setResult] = useState('')
+ const [result, setResult] = useState(0)
   let ResultsCO2;
-  console.log(lengthInMeters)
+
 
   useEffect(() => {
     CalculatorCO2()
@@ -26,7 +26,6 @@ function Calculator() {
       CalculatorCO2Bus()
     }
   }
-
   function CalculatorCO2Car() {
     if(fuelType==="Diesel"){
       if(tripType==="One Way"){
@@ -148,6 +147,7 @@ function Calculator() {
       setResult(ResultsCO2)
     }
   }
+  console.log(result)
 
   function CalculatorCO2Bus() {
     //https://www.winacc.org.uk/downloads/STAP/Shorter_Transport%20Emissions%20Report_110328.pdf 95 g CO2e/km Per pass 23% full 
@@ -157,6 +157,8 @@ function Calculator() {
     }
   }
 
+  
+
     return (
     <div className='calculator-card-container'>
      
@@ -164,7 +166,7 @@ function Calculator() {
       <h1 style={{ display: (!displayCard ? "block" : "none") }}>Your results will appear here!</h1>
 
       <div className='calculator-card' style={{ display: (displayCard ? "block" : "none") }}>
-        <h1>CO2:<span className="result"> {parseFloat(result).toFixed(1)}</span> g of CO2</h1>
+      <h1>{`CO2: ${result} g of CO2`}</h1>
         <h1>{lengthInMeters && lengthInMeters/1000+"Km"}</h1>
         <h2>{travelTimeInSeconds && parseFloat(travelTimeInSeconds/60).toFixed(1)+"min"} </h2>
       </div>

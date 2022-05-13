@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 
 export const AuthContext = createContext(null);
 
-export default function AuthContextProvider(props) {
+export function AuthContextProvider(props) {
   const [auth, setAuth] = useState(true);
   const [user, setUser] = useState(false);
   const [users, setUsers] = useState(false);
@@ -30,3 +30,4 @@ export default function AuthContextProvider(props) {
     </AuthContext.Provider>
   );
 }
+

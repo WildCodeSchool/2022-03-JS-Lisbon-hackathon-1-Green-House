@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../Contexts/AuthContext";
 // import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
