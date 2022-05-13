@@ -1,0 +1,55 @@
+
+.how-container{
+    background-color: #58D592;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    min-height: 300px;
+    
+}
+
+.how-container h1{
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.stepOne, .stepTwo, .stepThree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    gap: 20px;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.howContainer p {
+  
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .steps-container {
+        flex-direction: row;
+    }
+    .Location{
+        
+    }
+    .how-container{
+        margin-bottom: 20px;
+    }
+  }
