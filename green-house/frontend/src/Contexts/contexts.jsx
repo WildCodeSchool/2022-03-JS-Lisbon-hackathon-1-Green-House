@@ -10,7 +10,6 @@ const CurrentUserContext = createContext();
 export const CurrentUserContextProvider = ({ children }) => {
     const [userTransportation, setUserTransportation] = useState("");
     const [fuelType, setFuelType] = useState("");
-    const [km, setKm] = useState();
     const [displayCard, setDisplayCard] = useState(false);
     const [resultsCO2, setResultsCO2] = useState(0);
     const [lengthInMeters, setLengthInMeters] = useState('')
@@ -24,8 +23,6 @@ export const CurrentUserContextProvider = ({ children }) => {
                 setFuelType,
                 displayCard,
                 setDisplayCard,
-                km, 
-                setKm,
                 resultsCO2, 
                 setResultsCO2,
                 lengthInMeters, 

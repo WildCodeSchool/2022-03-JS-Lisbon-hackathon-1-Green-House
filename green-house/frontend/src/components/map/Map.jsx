@@ -3,7 +3,7 @@ import * as tt from '@tomtom-international/web-sdk-maps'
 import * as ttapi from '@tomtom-international/web-sdk-services'
 import './Map.css'
 import '@tomtom-international/web-sdk-maps/dist/maps.css'
-import CurrentUserContext from '../../Contexts/contexts'
+import CurrentUserContext from '../../contexts/contexts'
 
 
 const Map = () => {

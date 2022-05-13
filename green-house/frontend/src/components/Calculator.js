@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState} from 'react'
-import CurrentUserContext from '../Contexts/contexts';
+import CurrentUserContext from '../contexts/contexts';
 
 function Calculator() {
   const { userTransportation, setUserTransportation, fuelType, setFuelType, displayCard, setDisplayCard, lengthInMeters, setLengthInMeters} = useContext(CurrentUserContext)

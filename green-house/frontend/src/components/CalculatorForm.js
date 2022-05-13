@@ -1,5 +1,5 @@
 import React, { useContext} from 'react'
-import CurrentUserContext from '../Contexts/contexts';
+import CurrentUserContext from '../contexts/contexts';
 
 
 function CalculatorForm() {

@@ -1,5 +1,5 @@
 import './App.css';
-import { CurrentUserContextProvider } from './Contexts/contexts';
+import { CurrentUserContextProvider } from './contexts/contexts';
 import CalculatorForm from './components/CalculatorForm';
 import Calculator from './components/Calculator';
 import Navbar from './components/navigation/Navbar/Navbar';
