@@ -1,0 +1,169 @@
+.section-1 {
+    display: initial;
+}
+
+.home-title {
+    display: initial;
+    font-size: 40px;
+    font-weight: 600;
+    max-width: 23ch;   
+    padding-bottom: 20px;
+}
+
+.section-title {
+    display: grid;
+    gap: 10px;
+}
+
+.home-title-desktop {
+    display: none;
+    font-size: 40px;
+    font-weight: 600;
+    max-width: 23ch;   
+}
+
+.location {
+    display: flex;
+    gap: 10px;
+}
+
+.choose-location {
+    display: initial;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.main-section-container {
+    padding-top: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* form */
+
+.section-1-container {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    gap: 30px;
+    order: 2;
+}       
+
+.section-2-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-outer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+
+}
+
+.form-container {
+    display: grid;
+    gap: 30px;
+}
+
+.form-container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.calculator-card-container {
+    display: flex;
+    padding: 30px;
+}
+
+.calculator-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.form-button {
+
+    color: #fff;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    align-self: center;
+    justify-self: end;
+    border-radius: 5px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .section-1 {
+        display: flex;
+    }
+
+    .section-1-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        order: 0;
+    }       
+
+    .section-2-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: 240px 1fr 1fr;
+        gap: 30px;
+    }
+
+    .calculator-card-container {
+        padding: 50px;
+        min-width: 400px;
+    }
+
+    .home-title-desktop {
+        display: block;
+    }
+
+    
+    .home-title {
+        display: none;
+        font-size: 40px;
+        font-weight: 600;
+        max-width: 23ch;   
+    }
+
+    .section-title {
+        gap: 20px;
+    }
+
+    .choose-location {
+        display: none;
+    }
+
+    
+}
