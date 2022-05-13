@@ -50,4 +50,10 @@ margin-bottom: 2px;
         gap: 10px;
         text-align: center;
     }
+
+    .img-container p{
+        font-weight: 500;
+        
+    }
+
 }
