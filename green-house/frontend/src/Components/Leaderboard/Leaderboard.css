@@ -2,6 +2,7 @@
 .leaderboard-container {
     display: grid;
     gap: 60px;
+    padding-bottom: 40px;
 }
 
 
@@ -15,3 +16,46 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+
+.leaderboard-table > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.leaderboard-table > div img{
+    width: 50px;
+}
+
+.user-info p:nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.user-info-email {
+    display: none;
+}
+
+.leaderboard-places {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .leaderboard-container{
+        justify-content: center;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    .user-info {
+        display: flex;
+        gap:40px;
+    }
+
+    .user-info-email {
+        display: initial;
+    }
+  }

@@ -14,7 +14,7 @@ export default function Leaderboard() {
                 <h1>Leaderboard</h1>
             </div>
 
-            <div className="leaderboard-table-info">
+            {/* <div className="leaderboard-table-info">
               
                     <p>Avatar</p>
                     <p>Username</p>
@@ -22,41 +22,60 @@ export default function Leaderboard() {
                     <p>Points</p>
                     <p>Rank</p>
                
-            </div>
+            </div> */}
             <div className="leaderboard-table">
                 <div>
-                    <img src={avatar1} alt="avatar1" />
-                    <p>username</p>
-                    <p>email</p>
-                    <p>points</p>
-                    <img src="" alt="" />
+                    <span className="leaderboard-places">1</span>
+                    <img className="avatar" src={avatar1} alt="avatar1" />
+                    <div className="user-info">
+                        <p>Sara Smith</p>
+                        <p><span>1293</span> points</p>
+                        <p className="user-info-email">sara.smith@email.com</p>
+                    </div>
                 </div>
             </div>
             <div className="leaderboard-table">
                 <div>
-                    <img src={avatar2} alt="avatar2" />
-                    <p>username</p>
-                    <p>email</p>
-                    <p>points</p>
-                    <img src="" alt="" />
+                    <span className="leaderboard-places">2</span>
+                    <img className="avatar" src={avatar2} alt="avatar2" />
+                    <div className="user-info">
+                        <p>Dave Maguire</p>
+                        <p><span>1293</span> points</p>
+                        <p className="user-info-email">dave.maguire@email.com</p>
+                    </div>
                 </div>
             </div>
             <div className="leaderboard-table">
                 <div>
-                    <img src={avatar3} alt="avatar3" />
-                    <p>username</p>
-                    <p>email</p>
-                    <p>points</p>
-                    <img src="" alt="" />
+                    <span className="leaderboard-places">3</span>
+                    <img className="avatar" src={avatar3} alt="avatar3" />
+                    <div className="user-info">
+                        <p>Jessica Travis</p>
+                        <p><span>1293</span> points</p>
+                        <p className="user-info-email">jessica.travis@email.com</p>
+                    </div>
                 </div>
             </div>
             <div className="leaderboard-table">
                 <div>
-                    <img src={avatar4} alt="avatar4" />
-                    <p>username</p>
-                    <p>email</p>
-                    <p>points</p>
-                    <img src="" alt="" />
+                    <span className="leaderboard-places">4</span>
+                    <img className="avatar" src={avatar4} alt="avatar4" />
+                    <div className="user-info">
+                        <p>Amanda Gomez</p>
+                        <p><span>1293</span> points</p>
+                        <p className="user-info-email">amanda.gomez@email.com</p>
+                    </div>
+                </div>
+            </div>
+            <div className="leaderboard-table">
+                <div>
+                    <span className="leaderboard-places">5</span>
+                    <img className="avatar" src={avatar5} alt="avatar5" />
+                    <div className="user-info">
+                        <p>John Travolta</p>
+                        <p><span>1293</span> points</p>
+                        <p className="user-info-email">john.travolta@email.com</p>
+                    </div>
                 </div>
             </div>
         </div>
