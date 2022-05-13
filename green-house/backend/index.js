@@ -1,21 +1,26 @@
+const connection = require("./config");
 const express = require("express");
 const app = express();
-const connection = require("./config");
-const authRouter = require("./routes/auth");
-const port = 5000;
-const passport = require("passport");
-const passwordRouter = require("./routes/password.route");
+const authRouter = require("./auth");
+
+const port = process.env.PORT ?? 3000;
 
 connection.connect((err) => {
-  if (err) throw err;
-  console.log("Successfully connected to the database");
+  if (err) {
+    console.error("error connecting: " + err.stack);
+  } else {
+    console.log("connected as id " + connection.threadId);
+    console.log("Successfully connected to the database");
+  }
 });
 
 app.use(express.json());
 app.use("/auth", authRouter);
-app.use("/password", passwordRouter);
 
 app.listen(port, (err) => {
-  if (err) throw err;
-  console.log(`App is listening at ${port}`);
+  if (err) {
+    console.error("Something bad happened");
+  } else {
+    console.log(`Server is listening on ${port}`);
+  }
 });

@@ -1,7 +1,6 @@
-//  Add in the authentication within this file
 const express = require("express");
 const router = express.Router();
-const connection = require("../config");
+const connection = require("./config");
 const bcrypt = require("bcrypt");
 
 // jwt strategy modules
@@ -29,20 +28,14 @@ router.get(
   "/profile",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    connection.query("SELECT * FROM User;", (err, results) => {
+    console.log(res);
+    connection.query("SELECT * FROM users;", (err, results) => {
+      console.log(results);
       if (err) res.status(500).send(err);
       res.status(200).json(results);
     });
   }
 );
-
-// router.put(
-//   "/profile/edit",
-//   passport.authenticate("jwt", { session: false }),
-//   (req, res) => {
-//     res.send("User can view the profile");
-//   }
-// );
 
 passport.use(
   "local",
@@ -55,7 +48,7 @@ passport.use(
     },
     (email, password, callback) => {
       connection.query(
-        `SELECT * FROM User WHERE email = ?`,
+        `SELECT * FROM users WHERE email = ?`,
         email,
         (err, foundUser) => {
           // If generic error return the callback with the error message
@@ -80,7 +73,7 @@ passport.use(
 );
 
 // http://localhost:5000/auth/login
-router.post("/login", function (req, res) {
+router.post("/login", function(req, res) {
   passport.authenticate(
     "local",
     // Passport callback function below
@@ -96,11 +89,12 @@ router.post("/login", function (req, res) {
 
 // http://localhost:5000/auth/signup
 router.post("/signup", (req, res) => {
+  console.log(req);
   const password = req.body.password;
   bcrypt.hash(password, 10, (err, hash) => {
     const { email, userName } = req.body;
     const formData = [email, userName, hash];
-    const sql = "INSERT INTO User (email, userName, password ) VALUES (?,?,?)";
+    const sql = "INSERT INTO users (email, userName, password ) VALUES (?,?,?)";
 
     connection.query(sql, formData, (err) => {
       if (err) {
