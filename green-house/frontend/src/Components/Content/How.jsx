@@ -14,19 +14,19 @@ export default function How() {
                     <div className="stepOne">
                         <Location/>
                         <p>
-                        Insert your trip Begin-Point and End-Point
+                        You choose where you want to go
                         </p>
                     </div>
                     <div className="stepTwo">
                         <Calculate className="icon"/>
                         <p>
-                        We calculate based on the type of vehicle the amount of CO2 emitted 
+                        We calculate based on the type of vehicle the amount of CO2 emitted. 
                         </p>
                     </div>
                     <div className="stepThree">
                         <PointTree className="icon"/>
                         <p >
-                        You earn Points based on the amount of CO2 you dont pollute 
+                        You earn Points based on the amount of CO2 that you save.
                         </p>
                     </div>
             </div>
