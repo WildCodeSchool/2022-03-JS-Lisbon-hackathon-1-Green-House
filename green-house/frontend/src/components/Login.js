@@ -1,21 +1,21 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
 function Login() {
   const [state, setState] = useState({});
   const { setUser, setAuth } = useContext(AuthContext);
-  const history = useNavigate();
+  // const history = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("/auth/login", state).then((response) => {
+    axios.post("http://localhost:5011/auth/login", state).then((response) => {
       setUser(response.data.foundUser);
       setAuth(true);
       Cookies.set("authToken", response.data.token);
-      history.push("/profile");
+      // history.push("/profile");
     });
   };
 

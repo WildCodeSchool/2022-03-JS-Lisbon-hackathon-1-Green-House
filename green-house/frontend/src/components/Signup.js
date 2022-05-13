@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [state, setState] = useState({});
-  const history = useNavigate();
+  // const history = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("/auth/signup", state).then((response) => {
+    axios.post("http://localhost:5011/auth/signup", state).then((response) => {
       alert("user has been signed up successfully");
-      history.push("/login");
+      // history.push("http://localhost:3000/login");
     });
   };
 
@@ -27,7 +27,7 @@ function Signup() {
         <input name="email" value={state.email} onChange={handleChange} />
         <br />
         <p>User Name</p>
-        <input name="fullName" value={state.userName} onChange={handleChange} />
+        <input name="userName" value={state.userName} onChange={handleChange} />
         <br />
         <p>Password</p>
         <input name="password" value={state.password} onChange={handleChange} />

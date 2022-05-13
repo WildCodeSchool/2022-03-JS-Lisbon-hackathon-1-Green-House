@@ -28,7 +28,6 @@ router.get(
   "/profile",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    console.log(res);
     connection.query("SELECT * FROM users;", (err, results) => {
       console.log(results);
       if (err) res.status(500).send(err);
