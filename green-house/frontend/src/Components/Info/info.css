@@ -1,6 +1,8 @@
 .info-container{
     display: grid;
-
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .info-team-container {
@@ -29,7 +31,7 @@ margin-bottom: 2px;
 @media only screen and (min-width: 1024px) {
     .info-team-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
         margin: 0 auto;
         gap: 15px;
     }
