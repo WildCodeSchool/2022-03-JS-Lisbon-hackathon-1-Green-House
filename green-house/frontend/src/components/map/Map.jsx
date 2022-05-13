@@ -12,7 +12,10 @@ const Map = () => {
   //const [lengthInMeters, setLengthInMeters] = useState('')
   const [longitude, setLongitude] = useState(-9.139337)
   const [latitude, setLatitude] = useState(38.722252)
+  const [travelTimeInSeconds, setTravelTimeInSeconds] = useState('')
   const {lengthInMeters, setLengthInMeters} = useContext(CurrentUserContext)
+ 
+
 
   const convertToPoints = (lngLat) => {
     return {
@@ -114,11 +117,15 @@ const Map = () => {
         .matrixRouting(callParameters)
         .then((matrixAPIResults) => {
           const results = matrixAPIResults.matrix[0]
+        //  console.log(results[0].response.routeSummary.TravelMode)
           setLengthInMeters(results[0].response.routeSummary.lengthInMeters)
+          setTravelTimeInSeconds(results[0].response.routeSummary.travelTimeInSeconds)
+          console.log(results[0].response.routeSummary.travelMode)
           const resultsArray = results.map((result, index) => {
             return {
               location: locations[index],
               drivingtime: result.response.routeSummary.travelTimeInSeconds,
+              
             }
           })
           resultsArray.sort((a, b) => {
@@ -154,6 +161,7 @@ const Map = () => {
       addDeliveryMarker(e.lngLat, map)
       recalculateRoutes()
     })
+    
 
     return () => map.remove()
   }, [longitude, latitude])
@@ -165,6 +173,7 @@ const Map = () => {
   return (
     <>
     <h1>{lengthInMeters && lengthInMeters/1000+"Km"}</h1>
+    <h2>{travelTimeInSeconds && parseFloat(travelTimeInSeconds/60).toFixed(1)+"min"} </h2>
       {map && (
         <div className="map-container">
           <div ref={mapElement} className="map" />
