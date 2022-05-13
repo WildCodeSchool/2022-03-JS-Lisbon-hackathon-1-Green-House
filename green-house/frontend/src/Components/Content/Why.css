@@ -10,7 +10,7 @@
 
 .whyContainer p {
     
-    width: auto;
+    /* width: auto; */
     padding-left: 40px;
     padding-right: 40px;
 
@@ -40,7 +40,7 @@
 }
 
 .whyText{
-    margin: 40px;
+    
 }
 
 .whyText h2{
