@@ -3,7 +3,7 @@ import CurrentUserContext from '../Contexts/contexts';
 
 
 function CalculatorForm() {
-    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard, km, setKm, resultsCO2, setResultsCO2} = useContext(CurrentUserContext)
+    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard} = useContext(CurrentUserContext)
   
 
     function handleTranportationType(event) {
@@ -16,10 +16,6 @@ function CalculatorForm() {
 
     function handleDisplayCard(){
         setDisplayCard(true);
-    }
-
-    function handleKm(event){
-        setKm(event.target.value);
     }
 
 
@@ -44,7 +40,8 @@ function CalculatorForm() {
           <h2>Trip/Frequency</h2>
           <div>
             <select id="trip" name="trip_type" value="trip">
-              <option></option>
+              <option>Day</option>
+              <option>Round Trip</option>
             </select>
            
             <select id="frequency" name="frequency_type" value="frequency">
@@ -65,13 +62,6 @@ function CalculatorForm() {
                     <option value="CNG">CNG</option>
                 </select>
             </div>
-        </div>
-
-        <div>
-            <label>
-                 km:
-                <input id="km" type="number" name="km" value={km} onChange={handleKm}></input>
-            </label>
         </div>
       </form>
         <button onClick={handleDisplayCard}>

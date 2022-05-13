@@ -1,15 +1,18 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState,useContext } from 'react'
 import * as tt from '@tomtom-international/web-sdk-maps'
 import * as ttapi from '@tomtom-international/web-sdk-services'
 import './Map.css'
 import '@tomtom-international/web-sdk-maps/dist/maps.css'
+import CurrentUserContext from '../../Contexts/contexts'
+
 
 const Map = () => {
   const mapElement = useRef()
   const [map, setMap] = useState({})
-  const [lengthInMeters, setLengthInMeters] = useState('')
+  //const [lengthInMeters, setLengthInMeters] = useState('')
   const [longitude, setLongitude] = useState(-9.139337)
   const [latitude, setLatitude] = useState(38.722252)
+  const {lengthInMeters, setLengthInMeters} = useContext(CurrentUserContext)
 
   const convertToPoints = (lngLat) => {
     return {
