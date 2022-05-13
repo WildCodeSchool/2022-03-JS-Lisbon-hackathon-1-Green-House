@@ -1,9 +1,9 @@
 import React, { useContext} from 'react'
-import CurrentUserContext from '../contexts/contexts';
+import CurrentUserContext from '../Contexts/Contexts';
 
 
 function CalculatorForm() {
-    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard} = useContext(CurrentUserContext)
+    const { userTransportation, setUserTransportation, FuelType, setFuelType, displayCard, setDisplayCard, frequencyType, setFrequencyType, tripType, setTripType,} = useContext(CurrentUserContext)
   
 
     function handleTranportationType(event) {
@@ -18,12 +18,20 @@ function CalculatorForm() {
         setDisplayCard(true);
     }
 
+     
+    function handleTripType(event){
+      setTripType(event.target.value);
+    }
+
+    function handleFrequencyType(event){
+        setFrequencyType(event.target.value);
+    }
 
     
 
     return (
-    <div>
-      <form>
+    <div className='form-container-outer'>
+      <form className='form-container'>
 
         <div>
           <h2>Choose a vehicle</h2>
@@ -39,12 +47,14 @@ function CalculatorForm() {
         <div>
           <h2>Trip/Frequency</h2>
           <div>
-            <select id="trip" name="trip_type" value="trip">
-              <option>Day</option>
-              <option>Round Trip</option>
+            <select id="trip" name="trip_type" onClick={handleTripType}>
+                <option value="One Way">One Way</option>
+                <option  value="Round Trip">Round Trip</option>
             </select>
-           
-            <select id="frequency" name="frequency_type" value="frequency">
+            <select id="frequency" name="frequency_type" value="frequency" onClick={handleFrequencyType}>
+                <option value="Daily">Daily </option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
             </select>
           </div>
         </div>
@@ -64,7 +74,7 @@ function CalculatorForm() {
             </div>
         </div>
       </form>
-        <button onClick={handleDisplayCard}>
+        <button className='form-button' onClick={handleDisplayCard}>
         Track your print
         </button>
     </div>

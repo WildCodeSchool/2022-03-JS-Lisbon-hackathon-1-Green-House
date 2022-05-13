@@ -8,11 +8,15 @@ import React, { createContext, useState, useEffect } from 'react';
 const CurrentUserContext = createContext();
 
 export const CurrentUserContextProvider = ({ children }) => {
+    
     const [userTransportation, setUserTransportation] = useState("");
     const [fuelType, setFuelType] = useState("");
     const [displayCard, setDisplayCard] = useState(false);
     const [resultsCO2, setResultsCO2] = useState(0);
     const [lengthInMeters, setLengthInMeters] = useState('')
+    const [travelTimeInSeconds, setTravelTimeInSeconds] = useState('')
+    const [tripType, setTripType] = useState('')
+    const [frequencyType, setFrequencyType] = useState('')
 
     return (
         <CurrentUserContext.Provider
@@ -26,7 +30,13 @@ export const CurrentUserContextProvider = ({ children }) => {
                 resultsCO2, 
                 setResultsCO2,
                 lengthInMeters, 
-                setLengthInMeters
+                setLengthInMeters,
+                travelTimeInSeconds,
+                setTravelTimeInSeconds,
+                tripType, 
+                setTripType,
+                frequencyType,
+                setFrequencyType
             }}
         >
             {children}

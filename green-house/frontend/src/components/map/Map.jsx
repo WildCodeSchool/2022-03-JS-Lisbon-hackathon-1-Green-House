@@ -3,7 +3,7 @@ import * as tt from '@tomtom-international/web-sdk-maps'
 import * as ttapi from '@tomtom-international/web-sdk-services'
 import './Map.css'
 import '@tomtom-international/web-sdk-maps/dist/maps.css'
-import CurrentUserContext from '../../contexts/contexts'
+import CurrentUserContext from '../../Contexts/Contexts'
 
 
 const Map = () => {
@@ -12,8 +12,7 @@ const Map = () => {
   //const [lengthInMeters, setLengthInMeters] = useState('')
   const [longitude, setLongitude] = useState(-9.139337)
   const [latitude, setLatitude] = useState(38.722252)
-  const [travelTimeInSeconds, setTravelTimeInSeconds] = useState('')
-  const {lengthInMeters, setLengthInMeters} = useContext(CurrentUserContext)
+  const {lengthInMeters, setLengthInMeters, travelTimeInSeconds, setTravelTimeInSeconds} = useContext(CurrentUserContext)
  
 
 
@@ -172,8 +171,7 @@ const Map = () => {
 
   return (
     <>
-    <h1>{lengthInMeters && lengthInMeters/1000+"Km"}</h1>
-    <h2>{travelTimeInSeconds && parseFloat(travelTimeInSeconds/60).toFixed(1)+"min"} </h2>
+    
       {map && (
         <div className="map-container">
           <div ref={mapElement} className="map" />
