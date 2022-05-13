@@ -1,14 +1,27 @@
-import {Routes, Route} from "react-router-dom"
 import Home from '../home/Home'
 import Info from '../Info/Info'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../home/Home";
+import Leaderboard from "../Leaderboard/Leaderboard";
+import AuthContextProvider, {  AuthContext } from "../../contexts/AuthContext.js";
+import Login from "../../Components/Login";
+import Signup from "../../Components/Signup";
+import Profile from "../../Components/Profile";
 
 
 function Main() {
   return (
-    <Routes>
-     <Route path="/" element={<Home />} />
-      <Route path="/info" element={<Info />} />
-    </Routes>
+    <AuthContextProvider>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+      </Routes>
+    </AuthContextProvider>
   );
 }
 
